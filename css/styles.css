@@ -15,8 +15,6 @@ opacity: 1;
   position: fixed;
   top: 0;
   overflow-y: scroll;
-
-  margin-bottom: 10%;
 }
 p{
   display: inline-block;
