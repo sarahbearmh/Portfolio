@@ -4,6 +4,7 @@ font-family: 'Nunito', sans-serif;
 color: white;
 font-size: .9em;
 opacity: 1;
+
 }
 .bg{
   background: url("../img/LumbergFlower.jpg");
@@ -14,6 +15,8 @@ opacity: 1;
   position: fixed;
   top: 0;
   overflow-y: scroll;
+
+  margin-bottom: 10%;
 }
 p{
   display: inline-block;
@@ -74,7 +77,7 @@ nav li{
   text-align: center;
   padding: 0 5px;
   float: left;
-  overflow: hidden;
+/*  overflow: hidden;*/
   background-color:  #343C40;
   box-shadow: 5px 5px 5px rgba(156,181,191,.7);
   width: 18%;
@@ -85,12 +88,14 @@ nav ul a:first-child li{
 nav ul a:last-child li{
   border-radius: 0 10px 10px 0;
 }
-nav a:link,
-nav a:visited{
-	color: #D0F2FF;
+a:link,
+a:visited{
+  color: #D0F2FF;
+  text-decoration: none;
 }
-nav a:hover{
-	color: #BBDAE5;
+a:hover{
+  color: #BBDAE5;
+  text-decoration: none;
 }
 
 
@@ -105,6 +110,74 @@ nav a:hover{
 .container *:after{
   box-sizing: border-box;
 }
+
+.clearfix {clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}
+
+@media(max-width: 470px){
+  .skills ul li{
+    width: 90%;
+    float: left;
+    margin-bottom: 2px;
+  }
+}
+@media(max-width: 535px){
+  .split{
+  width: 90%;
+  float: none;
+  margin-bottom: 2px;
+}
+}
+@media(max-width:612px) and (min-width: 470px){
+  .skills ul li:first-child{
+  width: 90%;
+  float: left;
+  margin-bottom: 2px;
+}
+.skills ul li,
+.skills ul li ul li:first-child{
+  width: 50%;
+  float: left;
+  margin-bottom: 2px;
+}
+}
+
+@media(max-width: 627px){
+   nav ul,
+   nav ul a li{
+    width: 95%;
+    margin: 0 auto;
+   }
+
+   nav ul a:first-child li{
+      border-radius: 10px 10px 0 0;
+    }
+   nav ul a:last-child li{
+    border-radius: 0 0 10px 10px;
+   }
+   .contact-info{
+    font-size: 1.5em;
+    line-height: 2em;
+   }
+   .contact-info h1,
+   .contact-info h2{
+    margin-top: 20px;
+    margin-bottom: 5px;
+   }
+   .contact-info a:link,
+   .contact-info a:link:before{
+    content: "";
+    position: absolute;
+    top: 85%;
+    left:8%;
+   }
+}
+@media(min-width:1130px){
+  nav li{
+    width:19%;
+  }
+}
+
+
 html,
 body{
   min-height: 100%;
@@ -113,14 +186,15 @@ body{
   background-image: radial-gradient(mintcream 0%, lightgray 100%);
 }
 .container{
-  margin: 4% auto;
+  margin: 4% 41%;
   width: 210px;
   height: 140px;
   position: relative;
   perspective: 1000px;
+  margin-bottom: 200px;
 }
 #carousel{
-  margin-top: 20%;
+  margin-top: 5%;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -135,8 +209,8 @@ body{
 #carousel figure{
   display: block;
   position: absolute;
-  width: 186px;
-  height: 116px;
+  width: 300px;
+  height: 250px;
   left: 10px;
   top: 10px;
   background: black;
